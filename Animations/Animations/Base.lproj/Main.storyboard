@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jQx-KR-NdB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Animated View Controller-->
+        <scene sceneID="As9-Qw-adC">
+            <objects>
+                <viewController id="jQx-KR-NdB" customClass="AnimatedViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i4C-KW-p9k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CatYawn" translatesAutoresizingMaskIntoConstraints="NO" id="4pt-yM-G9x">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="lu7-p9-wVy"/>
+                                    <constraint firstAttribute="height" constant="300" id="rA5-Il-DeT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4pt-yM-G9x" firstAttribute="centerY" secondItem="i4C-KW-p9k" secondAttribute="centerY" id="c9o-ZC-eMp"/>
+                            <constraint firstItem="4pt-yM-G9x" firstAttribute="centerX" secondItem="i4C-KW-p9k" secondAttribute="centerX" id="led-hk-XEt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="S4c-7c-xRA"/>
+                    </view>
+                    <connections>
+                        <outlet property="catImageView" destination="4pt-yM-G9x" id="fAB-hg-1pO"/>
+                        <segue destination="fec-Jg-5bK" kind="show" identifier="MainScreenShowSegue" id="zBd-KI-yaG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KZm-bG-YRd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475" y="-275"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="TYQ-eB-Bae">
+            <objects>
+                <viewController id="fec-Jg-5bK" customClass="MainViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BB3-cP-2h6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main VC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocR-5W-EnK">
+                                <rect key="frame" x="20" y="27" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zzk-wg-ZH6">
+                                <rect key="frame" x="0.0" y="71" width="414" height="737"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Zzk-wg-ZH6" firstAttribute="leading" secondItem="ifC-sh-KgW" secondAttribute="leading" id="2Kf-7p-U6g"/>
+                            <constraint firstItem="ocR-5W-EnK" firstAttribute="top" secondItem="ifC-sh-KgW" secondAttribute="top" constant="27" id="Hca-oB-zWU"/>
+                            <constraint firstItem="ifC-sh-KgW" firstAttribute="trailing" secondItem="ocR-5W-EnK" secondAttribute="trailing" constant="20" id="Lks-vg-IN0"/>
+                            <constraint firstItem="ocR-5W-EnK" firstAttribute="leading" secondItem="ifC-sh-KgW" secondAttribute="leading" constant="20" id="My0-7W-c1i"/>
+                            <constraint firstItem="Zzk-wg-ZH6" firstAttribute="top" secondItem="ocR-5W-EnK" secondAttribute="bottom" constant="8" id="Roe-cI-WkB"/>
+                            <constraint firstItem="Zzk-wg-ZH6" firstAttribute="bottom" secondItem="ifC-sh-KgW" secondAttribute="bottom" id="lu6-Wp-YiM"/>
+                            <constraint firstItem="Zzk-wg-ZH6" firstAttribute="trailing" secondItem="ifC-sh-KgW" secondAttribute="trailing" id="vfN-st-EXe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ifC-sh-KgW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3dz-wr-TDq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbU-jO-w83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2202.898550724638" y="-274.55357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PlH-OL-IBA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nkz-Sz-OcR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Sp-6d-Y9n">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fec-Jg-5bK" kind="relationship" relationship="rootViewController" id="Lv6-6O-MUN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jAk-JZ-dgJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1292.753623188406" y="-274.55357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CatYawn" width="1260" height="1322"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="zBd-KI-yaG"/>
+    </inferredMetricsTieBreakers>
+</document>
